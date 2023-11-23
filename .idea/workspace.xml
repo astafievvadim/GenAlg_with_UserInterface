@@ -4,17 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="89a4c341-07ff-48e1-aa81-2137e3e92d04" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/calc/Covariance.java" afterDir="false" />
+    <list default="true" id="89a4c341-07ff-48e1-aa81-2137e3e92d04" name="Changes" comment="Tournament done; &#10;&#10;TODO&#10;Make it look better&#10;Nan Nan Nan fix please">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/ga/genalg_with_userinterface/styling.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icon.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calc/Chromosome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calc/Chromosome.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calc/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calc/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calc/Model.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calc/Model.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/calc/Population.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calc/Population.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/calc/Specimen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/calc/Specimen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/genalg_with_userinterface/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/genalg_with_userinterface/HelloApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/ga/genalg_with_userinterface/HelloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/ga/genalg_with_userinterface/HelloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ga/genalg_with_userinterface/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ga/genalg_with_userinterface/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/ga/genalg_with_userinterface/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/ga/genalg_with_userinterface/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +41,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/GenAlg_with_UserInterface/src/main/java/calc&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "D:/GenAlg_with_UserInterface/src/main/resources",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GenAlg_with_UserInterface\src\main\resources" />
       <recent name="D:\GenAlg_with_UserInterface\src\main\java\calc" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.HelloApplication">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.ga.genalg_with_userinterface.HelloApplication" />
       <module name="GenAlg_with_UserInterface" />
@@ -82,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.HelloApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -96,6 +100,14 @@
       <option name="presentableId" value="Default" />
       <updated>1700512180312</updated>
     </task>
+    <task id="LOCAL-00001" summary="Tournament done; &#10;&#10;TODO&#10;Make it look better&#10;Nan Nan Nan fix please">
+      <created>1700760197017</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1700760197017</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -108,5 +120,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tournament done; &#10;&#10;TODO&#10;Make it look better&#10;Nan Nan Nan fix please" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tournament done; &#10;&#10;TODO&#10;Make it look better&#10;Nan Nan Nan fix please" />
   </component>
 </project>

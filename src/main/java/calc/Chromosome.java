@@ -74,10 +74,10 @@ public class Chromosome {
     }
 
     private void mutation(){
-       int totalLength = oneDoubleLength *3;
+       int totalLength = (oneDoubleLength *3);
        Random r = new Random();
-       if (r.nextInt(100) < mutationConst){
-                int randomPlace = r.nextInt(totalLength);
+       if (r.nextInt(100) <= mutationConst){
+                int randomPlace = r.nextInt(totalLength-1)+1;
                 String firstHalf = genes.substring(0,randomPlace);
                 int mutatedGene = 0;
                 if(genes.charAt(randomPlace) == 0) {

@@ -15,7 +15,12 @@ public class Main {
 
         //new HelloApplication();
         public static void main(String[] args) {
+
+            System.out.println(Long.toBinaryString(Double.doubleToRawLongBits(100)));
+            System.out.println(Long.toBinaryString(Double.doubleToRawLongBits(-100)));
+
             HelloApplication t = new HelloApplication();
             t.startApplication();
+
         }
 }

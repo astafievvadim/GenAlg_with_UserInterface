@@ -40,12 +40,12 @@ public class Specimen {
         firstShare = (Double.longBitsToDouble(new BigInteger(
                 chr.getGenes().substring(0, Chromosome.oneDoubleLength - 1),
                 2).longValue()));
-        secondShare = (Double.longBitsToDouble(new BigInteger(
+        secondShare = ((Double.longBitsToDouble(new BigInteger(
                 chr.getGenes().substring(Chromosome.oneDoubleLength, Chromosome.oneDoubleLength * 2 - 1),
-                2).longValue()));
-        thirdShare = (Double.longBitsToDouble(new BigInteger(
+                2).longValue())));
+        thirdShare = ((Double.longBitsToDouble(new BigInteger(
                 chr.getGenes().substring(Chromosome.oneDoubleLength*2),
-                2).longValue()));
+                2).longValue())));
     }
 
     private void normalize() {

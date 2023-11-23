@@ -73,17 +73,6 @@ public class Model {
         kids.addAll(temp);
 
         return kids;
-        /*
-        List<Specimen> Elitism = new ArrayList<>();
-        Population temp = population;
-
-
-        for(int i = 0; i < population.getLength()/10; i++){
-            Elitism.add(population.findBestOne(first_profitability, second_profitability, third_profitability));
-            temp.remove(0);
-        }
-        return Elitism;
-         */
     }
 
     public void printBestAtGeneration(int genNumber){

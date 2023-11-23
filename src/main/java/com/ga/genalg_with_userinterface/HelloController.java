@@ -24,10 +24,21 @@ public class HelloController {
     public TextField PopulationInput;
     public TextField GenerationsInput;
     public Text AnswerOutput;
-    //public LineChart Graph;
     public Button StartButton;
     public AnchorPane PutHere;
 
+
+    @FXML
+    public void initialize(){
+         FirstInput.setPromptText("First profitability");
+         SecondInput.setPromptText("Second profitability");
+         ThirdInput.setPromptText("Third profitability");
+         PopulationInput.setPromptText("Population size");
+         GenerationsInput.setPromptText("Number of generations");
+
+
+         PopulationInput.getParent().requestFocus();
+    }
     @FXML
     public void OnStartButtonAction(ActionEvent event) {
 
@@ -79,6 +90,7 @@ public class HelloController {
         Graph.getCreateSymbols();
         PutHere.getChildren().clear();
         PutHere.getChildren().add(Graph);
+
         Graph.layout();
 
         /*
