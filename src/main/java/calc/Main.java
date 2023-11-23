@@ -1,5 +1,9 @@
 package calc;
 
+import com.ga.genalg_with_userinterface.HelloApplication;
+
+import static javafx.application.Application.launch;
+
 public class Main {
 
     /*
@@ -8,17 +12,10 @@ public class Main {
     Доля один доля два коэффицент ковариации
      */
 
-    public static void main(String[] args) {
 
-        Model c = new Model(
-                1, 50, 8,   // доходности
-                15,                          // число особей в популяции
-                100                         // поколения
-                );                       // капитал
-
-        c.printBestAtGeneration(1);
-        System.out.println("---");
-
-        c.printResult();
-    }
+        //new HelloApplication();
+        public static void main(String[] args) {
+            HelloApplication t = new HelloApplication();
+            t.startApplication();
+        }
 }

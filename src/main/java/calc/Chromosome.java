@@ -48,7 +48,7 @@ public class Chromosome {
 
     public Specimen singleOffspring(Chromosome chr){
 
-       String tempFirstParent = genes.substring(0, (int) (oneDoubleLength * 1.5 -1));
+       String tempFirstParent = genes.substring(0, (int) (oneDoubleLength * 1.5));
        String tempSecondParent = chr.genes.substring((int) (oneDoubleLength * 1.5));
 
        Chromosome temp = new Chromosome(tempFirstParent + tempSecondParent);

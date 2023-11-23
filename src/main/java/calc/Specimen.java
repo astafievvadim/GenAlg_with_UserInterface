@@ -14,16 +14,12 @@ public class Specimen {
         generateRandom();
 
         normalize();
-
-        debugging();
     }
 
     public Specimen(Chromosome chr) {
         decode(chr);
 
         normalize();
-
-        debugging();
     }
 
     private void generateRandom(){
@@ -35,8 +31,9 @@ public class Specimen {
     }
 
 
-    public double calculateX(double a, double b, double c) {
-        return (firstShare * a + secondShare * b + thirdShare * c) / 100;
+    public double calculateX(double a, double b, double c){
+
+        return (firstShare * a + secondShare * b + thirdShare * c)/1000;
     }
 
     private void decode(Chromosome chr) {
@@ -53,9 +50,11 @@ public class Specimen {
 
     private void normalize() {
 
-        firstShare = (firstShare/(firstShare+secondShare+thirdShare)) * 100;
-        secondShare = (secondShare/(firstShare+secondShare+thirdShare)) * 100;
-        thirdShare = (thirdShare /(firstShare+secondShare+thirdShare)) * 100;
+        double temp = firstShare + secondShare + thirdShare;
+
+        firstShare = (firstShare/temp) * 100;
+        secondShare = (secondShare/temp) * 100;
+        thirdShare = (thirdShare /temp) * 100;
 
         chromosome = new Chromosome(this);
     }

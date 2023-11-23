@@ -12,6 +12,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Text;
 
 import java.net.URL;
@@ -23,10 +24,10 @@ public class HelloController {
     public TextField PopulationInput;
     public TextField GenerationsInput;
     public Text AnswerOutput;
-    public LineChart Graph;
+    //public LineChart Graph;
     public Button StartButton;
-    public CategoryAxis xAxis;
-    public NumberAxis yAxis;
+    public AnchorPane PutHere;
+
     @FXML
     public void OnStartButtonAction(ActionEvent event) {
 
@@ -45,30 +46,59 @@ public class HelloController {
                 generations
         );
 
-        //manageGraph(c);
+        manageGraph(c);
 
         AnswerOutput.setText(c.getResult());
 
+        c.printBestAtGeneration(generations/4);
+
+        c.printBestAtGeneration(generations/3);
+
+        c.printBestAtGeneration(generations/2);
         c.printResult();
     }
 
     private void manageGraph(Model c){
 
-        LineChart temp = null;
+        XYChart.Series<Integer,Double> series = new XYChart.Series<Integer,Double>();
+        series.setName("Fitness per generation");
 
-        ObservableList list = FXCollections.observableArrayList(c.getBestSpecimensPerGen());
-
-        ObservableList<XYChart.Data<Number, Number>> data = FXCollections.<XYChart.Data<Number, Number>>observableArrayList();
-        for (int i = 0; i < c.getBestSpecimensPerGen().length; i++){
-            data.add(new XYChart.Data<>(i, c.getYofNumber(i)));
+        for(int i = 0; i < c.getBestSpecimensPerGen().length; i++){
+            series.getData().add(new XYChart.Data<>(i,c.getYofNumber(i)/c.getY()));
         }
 
-        XYChart.Series series = new XYChart.Series(data);
+        final NumberAxis xAxis = new NumberAxis();
+        final NumberAxis yAxis = new NumberAxis();
 
-        temp.getData().add(series);
+        LineChart Graph = new LineChart<Number,Number>(xAxis, yAxis);
 
-        Graph = temp;
-
+        Graph.getYAxis().setAutoRanging(true);
+        Graph.getXAxis().setAutoRanging(true);
+        Graph.setCreateSymbols(false);
+        Graph.getData().add(series);
+        Graph.getCreateSymbols();
+        PutHere.getChildren().clear();
+        PutHere.getChildren().add(Graph);
         Graph.layout();
+
+        /*
+        String funcs[] = {"y(x) = sin(X)","y(x) = cos(x) - 2 * sin(x)","y(x) = sin(x*x)"};
+        functionChooser.getItems().setAll(funcs);
+        functionChooser.getSelectionModel().selectFirst();
+
+        lnChart = new LineChart<Number,Number>(xAxis,yAxis);
+        XYChart.Series series1 = new XYChart.Series();
+        series1.setName("Portfolio 1");
+        series1.getData().add(new XYChart.Data(0, 23));
+        series1.getData().add(new XYChart.Data(1, 14));
+        series1.getData().add(new XYChart.Data(2, 15));
+        series1.getData().add(new XYChart.Data(3, 24));
+        series1.getData().add(new XYChart.Data(4, 34));
+
+        lnChart.getData().add(series1);
+
+
+         */
+        }
     }
-}
+

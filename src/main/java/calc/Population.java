@@ -19,6 +19,10 @@ public class Population {
         }
     }
 
+    public void remove(int x){
+        pool.remove(x);
+    }
+
     public Specimen findBestOne(double a, double b, double c){
 
         List<Specimen> temp = pool;
