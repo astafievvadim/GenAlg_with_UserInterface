@@ -50,11 +50,11 @@ public class Specimen {
 
     private void normalize() {
 
-        double temp = firstShare + secondShare + thirdShare;
+        double temp = Math.abs(firstShare) + Math.abs(secondShare) + Math.abs(thirdShare);
 
-        firstShare = (firstShare/temp) * 100;
-        secondShare = (secondShare/temp) * 100;
-        thirdShare = (thirdShare /temp) * 100;
+        firstShare = Math.abs(firstShare/temp) * 100;
+        secondShare = Math.abs(secondShare/temp) * 100;
+        thirdShare = Math.abs(thirdShare /temp) * 100;
 
         chromosome = new Chromosome(this);
     }
@@ -80,9 +80,9 @@ public class Specimen {
     }
 
     public String toString() {
-        String first = ((int)firstShare) + "%";
-        String second =((int)secondShare)+ "%";
-        String third = ((int)thirdShare)+ "%";
+        String first = (int)(firstShare) + "%";
+        String second =(int)(secondShare)+ "%";
+        String third = (int)(thirdShare)+ "%";
 
         return "Percentages: " + first + " " + second + " " + third;
     }

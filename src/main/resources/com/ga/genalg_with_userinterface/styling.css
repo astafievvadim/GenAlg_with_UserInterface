@@ -1,48 +1,68 @@
 * {
-   -fx-base1: #c78a44;
-   -fx-base2: #d8b26e;
-   -fx-base3: #dad5d2;
-   -fx-base4: #b4c1c5;
-   -fx-base5: #5f7782;
+   -fx-text: #ffb4a2;
+   -fx-hint: #e5989b;
+   -fx-accent: #b5838d;
+   -fx-background: #6d6875;
+}
+
+.root {
+    -fx-font-size: 16px;
+    -fx-font-family: "Agency FB";
+    -fx-font-weight: bold;
 }
 
 .button {
-    -fx-text-fill: -fx-base1;
-    -fx-border-color:  -fx-base2;
-    -fx-background-color: -fx-base2;
-    -fx-border-radius: 0;
+    -fx-text-fill: -fx-text;
+    -fx-border-color:  -fx-accent;
+    -fx-background-color: -fx-accent;
+    -fx-border-radius: 10;
+        -fx-font-weight: bold;
     -fx-padding: 6  6  6  6;
 }
 
 .text-field{
-    -fx-text-fill: -fx-base1;
-    -fx-focus-color: red;
-    -fx-faint-focus-color: #ff000022;
-    -fx-prompt-text-fill: -fx-base1;
-    -fx-background-color: -fx-base2, -fx-base2, -fx-base2;
+    -fx-text-fill: -fx-text;
+    -fx-faint-focus-color: -fx-hint;
+        -fx-font-weight: bold;
+    -fx-prompt-text-fill: -fx-hint;
+    -fx-background-color: -fx-accent, -fx-accent, -fx-accent;
+    -fx-border-radius: 10;
     -fx-padding: 6  6  6  6;
 }
 
-Text{
-    -fx-text-fill: -fx-base1;
-    -fx-prompt-text-fill: -fx-base1;
-    -fx-background-color: -fx-base2;
-    -fx-padding: 6  6  6  6;
+.chart-line-symbol {
+    -fx-background-color: -fx-hint, -fx-text;
 }
+
+.chart {
+    -fx-padding: 5px;
+}
+.chart-content {
+    -fx-padding: 10px;
+}
+.chart-title {
+    -fx-font-size: 1.4em;
+}
+
+.chart-series-line {
+    -fx-stroke: -fx-text;
+    -fx-stroke-width: 4px;
+}
+.default-color0.chart-line-symbol { -fx-background-color: -fx-hint, -fx-hint; }
+.default-color0.chart-series-line { -fx-stroke: -fx-hint; }
 
 #outputAnchorPane{
-    -fx-background-color: -fx-base5;
+    -fx-background-color: -fx-background;
 }
 
-
 #inputAnchorPane{
-    -fx-background-color: -fx-base5;
+    -fx-background-color: -fx-background;
 }
 
 #PutHere{
-    -fx-background-color: #B5B8AA;
+    -fx-background-color: -fx-background;
 }
 
 #border{
-    -fx-background-color: #B5B8AA;
+    -fx-background-color: -fx-background;
 }

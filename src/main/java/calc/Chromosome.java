@@ -48,11 +48,19 @@ public class Chromosome {
 
     public Specimen singleOffspring(Chromosome chr){
 
-       String tempFirstParent = genes.substring(0, (int) (oneDoubleLength * 1.5));
+       String tempFirstParent = genes.substring(0, (int) (oneDoubleLength/2));
        String tempSecondParent = chr.genes.substring((int) (oneDoubleLength * 1.5));
+       String A = genes.substring(0, oneDoubleLength/2);
+       String B = chr.getGenes().substring(oneDoubleLength/2,oneDoubleLength);
+       String C = genes.substring(oneDoubleLength, (int) (oneDoubleLength*1.5));
+       String D = chr.getGenes().substring((int) (oneDoubleLength*1.5), oneDoubleLength*2);
+       String E = genes.substring(oneDoubleLength*2, (int) (oneDoubleLength*2.5));
+       String F = chr.getGenes().substring((int) (oneDoubleLength*2.5), oneDoubleLength*3);
+       //Chromosome temp = new Chromosome(tempFirstParent + tempSecondParent);
 
-       Chromosome temp = new Chromosome(tempFirstParent + tempSecondParent);
-       mutation();
+       Chromosome temp = new Chromosome(A+B+C+D+E+F);
+
+        mutation(temp);
 
       /*
         int place1 = new Random().nextInt(oneDoubleLength);
@@ -73,18 +81,20 @@ public class Chromosome {
         return genes;
     }
 
-    private void mutation(){
+    private Chromosome mutation(Chromosome temp){
        int totalLength = (oneDoubleLength *3);
+       Chromosome result = temp;
        Random r = new Random();
        if (r.nextInt(100) <= mutationConst){
                 int randomPlace = r.nextInt(totalLength-1)+1;
-                String firstHalf = genes.substring(0,randomPlace);
+                String firstHalf = temp.getGenes().substring(0,randomPlace);
                 int mutatedGene = 0;
-                if(genes.charAt(randomPlace) == 0) {
+                if(temp.getGenes().charAt(randomPlace) == 0) {
                     mutatedGene = 1;
                 }
-                String secondHalf = genes.substring(randomPlace+1);
-                genes = firstHalf + mutatedGene + secondHalf;
+                String secondHalf = temp.getGenes().substring(randomPlace+1);
+                result = new Chromosome( firstHalf + mutatedGene + secondHalf);
             }
-       }
-    }
+    return result;
+   }
+}
